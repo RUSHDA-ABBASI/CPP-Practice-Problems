@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+//Write a function int callCounter() that returns how many times it has been called so far.
+//Hint: Use a static local variable in the function.
+
+int callCounter() {
+    static int count = 0;
+    count++;
+    return count;
+}
+
+int main() {
+    cout << callCounter() << endl; // 1
+    cout << callCounter() << endl; // 2
+    cout << callCounter() << endl; // 3
+}
